@@ -1,5 +1,5 @@
 tags = {
-  environment = "production"
+  environment = "testing"
   managed_by  = "terraform"
   project     = "vm-deployment"
 }
