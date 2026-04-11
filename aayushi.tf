@@ -3,3 +3,9 @@ variable "resource_group_name" {
   type        = string
   default     = "rg-vm-terraform-4"
 }
+
+variable "resource_group_name" {
+  description = "Name of the resource group"
+  type        = string
+  default     = "rg-vm-terraform-5"
+}
