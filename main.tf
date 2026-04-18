@@ -49,6 +49,14 @@ resource "azurerm_subnet" "main" {
   address_prefixes     = var.subnet_address_prefix
 }
 
+#JIRA-202-Subnet-3 added
+resource "azurerm_subnet" "subnet3" {
+  name                 = "${var.vm_name}-subnet-3"
+  resource_group_name  = azurerm_resource_group.subnet3.name
+  virtual_network_name = azurerm_virtual_network.subnet3.name
+  address_prefixes     = var.subnet_address_prefix.subnet3
+
+}
 #JIRA-201 create a subnet for secondary vnet
 resource "azurerm_subnet" "subnet-2" {
   name                 = "${var.vm_name}-subnet-2"
