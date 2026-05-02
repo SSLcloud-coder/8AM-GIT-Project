@@ -33,6 +33,12 @@ resource "azurerm_virtual_network" "subnet-6" {
   resource_group_name = azurerm_resource_group.third.name
 }
 
+resource "azurerm_virtual_network" "secondary" {
+  name                = "${var.vm_name}-vnet-secondary"
+  address_space       = var.address_space.secondary
+  location            = azurerm_resource_group.secondary.location
+  resource_group_name = azurerm_resource_group.secondary.name
+}
 resource "azurerm_virtual_network" "Primary" {
   name                = "${var.vm_name}-vnet-2"
   address_space       = var.address_space.2
