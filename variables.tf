@@ -16,6 +16,12 @@ variable "location-2" {
   default     = "westus-3"
 }
 
+variable "location-3" {
+  description = "Azure region where resources will be created"
+  type        = string
+  default     = "westus-3"
+}
+
 variable "vm_name" {
   description = "Name of the virtual machine"
   type        = string
